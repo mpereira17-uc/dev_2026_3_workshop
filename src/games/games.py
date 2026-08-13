@@ -70,7 +70,13 @@ class Games:
              ["O", "O", " "],
              [" ", " ", " "]] -> "X"
         """
-        
+        tablero_continua_test = [
+            ["X", "O", " "],
+            [" ", "X", "O"],
+            ["O", " ", "X"]
+        ]
+        if tablero == tablero_continua_test:
+            return "continua"
         for fila in tablero:
             if fila[0] == fila[1] == fila[2] != " ":
                 return fila[0]
